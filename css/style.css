@@ -29,20 +29,25 @@ html {
 body {
   font-family: 'FiraSans';
   font-size: 1em;
-  background-color: #262833;
+  background-color: #1e1f27;
   color: rgba(255, 255, 255, 0.87);
 }
 
 .jumbotron{
-  background-color: #1e1f27;  
+  background-color: #1e1f27;
+  height: 100vh;  
 }
 
 .bg-main{
-  background-color: #262833;
+  background-color: #1e1f27;
 }
 
 .btn{
   border-radius: 50px;
+}
+
+.resume-btn{
+  border-radius: 0.3em;
 }
 
 .nav-link{
@@ -71,6 +76,10 @@ body {
 .dark-sub-text{
   /* color: #212529b6 */
   color: rgba(255, 255, 255, 0.60);
+}
+
+hr{
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .connect-mail{
