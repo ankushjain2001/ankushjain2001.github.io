@@ -34,8 +34,14 @@ body {
 }
 
 .jumbotron{
-  background-color: #1e1f27;
-  height: 100vh;  
+  background-color: #1e1f27; 
+}
+
+.vertical-center {
+  min-height: 90%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
 }
 
 .bg-main{
