@@ -29,14 +29,28 @@ html {
 body {
   font-family: 'FiraSans';
   font-size: 1em;
+  background-color: #262833;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .jumbotron{
-  background-color: #eff3f7;
+  background-color: #1e1f27;  
+}
+
+.bg-main{
+  background-color: #262833;
 }
 
 .btn{
   border-radius: 50px;
+}
+
+.nav-link{
+  color: rgba(255, 255, 255, 0.60) !important;
+}
+
+.nav-link:hover{
+  color: rgba(255, 255, 255, 0.87) !important;
 }
 
 .head-font {
@@ -50,8 +64,13 @@ body {
   font-size: 14px;
 }
 
+.main-text{
+  color: rgba(255, 255, 255, 0.87);
+}
+
 .dark-sub-text{
-  color: #212529b6
+  /* color: #212529b6 */
+  color: rgba(255, 255, 255, 0.60);
 }
 
 .connect-mail{
@@ -85,7 +104,7 @@ body {
 }
 
 .connect-badge{
-  background-color: rgba(255, 255, 255, 0.712);
+  background-color: rgba(255, 255, 255, 0);
   border: 1px solid #007bff;
   border-radius: 50px;
   transition: 0.5s;
