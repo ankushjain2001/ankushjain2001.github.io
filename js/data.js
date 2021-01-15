@@ -1,6 +1,6 @@
 var data = {
   "about": {
-    "intro": "Hello! I am Ankush Jain. I am a machine learning engineer and a full-stack developer. My experience has taught me to apply my skills to real-world problems. And my on-going study in the master's program at <a href=\"https://engineering.nyu.edu/academics/programs/computer-science-ms\" class=\"text-primary\">New York University</a> has further equipped me with all the essential tools for my niche.<br><br>Previously, I have worked as a Software Engineer at <a href=\"https://www.infosys.com/services/validation-solutions/service-offerings/machine-learning-qa.html\" class=\"text-primary\">Infosys</a>. I worked on a variety of machine learning solutions for Software Quality Assurance & Testing. Presently, I am working part-time with <a href=\" https://vyorius.com/\" class=\"text-primary\">Vyorius</a> to deploy their monolith applications on AWS.<br><br>Here are my key skills in Machine Learning and Full-Stack development.",
+    "intro": "Hello! I am Ankush Jain. I am a machine learning engineer and a full-stack developer. My experience has taught me to apply my skills to real-world problems. And my on-going study in the master's program at <a href=\"https://engineering.nyu.edu/academics/programs/computer-science-ms\" class=\"text-primary\">New York University</a> has further equipped me with all the essential tools for my niche.<br><br>Previously, I have worked as a Software Engineer at <a href=\"https://www.infosys.com/services/validation-solutions/service-offerings/machine-learning-qa.html\" class=\"text-primary\">Infosys</a>. I worked on a variety of machine learning solutions for Software Quality Assurance & Testing. Presently, I am working part-time with <a href=\" https://vyorius.com/\" class=\"text-primary\">Vyorius</a> to deploy their product-line on AWS.<br><br>Here are my key skills in Machine Learning and Full-Stack development.",
     "ml": "\
         <li>Python (NumPy, Pandas, Scikit-Learn etc.) / R</li>\
         <li>PyTorch / Keras</li>\
@@ -66,5 +66,82 @@ var data = {
       <li>Platform being used by leading Infosys projects in Financial Services and Energy domain</li>\
     "
     },
+  ],
+  "featured_projects": [
+    {
+      "name": "Securodrive",
+      "description": "Securodrive is a driving assistant platform built on Amazon Web Services (AWS). It is built to avoid road accidents due to sleepy drivers. This app assists the drivers by applying AI techniques to the live video stream of the driver and generates alerts when the driver appears to be yawning excessively or going in a drowsy state.<br><br>AWS Lambda and API Gateway were used to implement the web app and video streaming, Cognito and Rekognition were used for user auth, Sagemaker was used to train and deploy the model, and Elasticsearch & Kibana were used for real-time data analytics.",
+      "github_url": "https://github.com/ankushjain2001/SecuroDrive",
+      "image_url": "./img/projects/securodrive.jpg",
+      "demo_url": "https://youtu.be/vUbxQOmeNQc",
+      "tech": [
+        "AWS",
+        "Elasticsearch",
+        "Kibana",
+        "Deep Learning",
+        "jQuery"
+      ]
+    },
+    {
+      "name": "Multi-hop Question & Answering",
+      "description": "Research based project to train a question and answering model for multi-hop questions. Multi-hop QA requires logical inference or aggregation of information from various parts of the information text (like referring multiple wikis to answer a question) in order to perform QA. A transformer based longformer model was trained on the HotpotQA dataset.",
+      "github_url": "https://github.com/ankushjain2001/Multi-Hop-Question-Answering",
+      "image_url": "./img/projects/mhqa.png",
+      "demo_url": "",
+      "tech": [
+        "Deep Learning",
+        "NLP",
+        "Tensorflow",
+        "Transformer/Longformer Model",
+        "Jupyter",
+        "Python"
+      ]
+    },
+    {
+      "name": "Ascend",
+      "description": "Developed an end-to-end natural text search engine for business teams (primarily the new recruits) to mine business information from mailbox data such as documents, meetings etc. of all the project team members and improve their productivity. A BERT model for Question and Answering was also trained and deployed. This project was built in solo capacity in a month.",
+      "github_url": "",
+      "image_url": "./img/projects/ascend.png",
+      "demo_url": "https://www.youtube.com/watch?v=NocONFKs7Y0",
+      "tech": [
+        "Deep Learning",
+        "NLP",
+        "Python",
+        "Keras",
+        "BERT",
+        "React.js",
+        "FastAPI",
+        "MongoDB"
+      ]
+    },
+    {
+      "name": "NYC Open Data Profiling",
+      "description": "Built a high-performance Spark pipeline to ingest 1159 New York City open big data sets in order to emulate real-world data volumes, handle data noise, and perform semantic profiling of the data columns.<br><br>The generic profiling was performed with Spark RDDs and Dataframes. Semantic profiling was performed with Named Entity Recognition, Soundex, Regex, Ontologies and Clustering.",
+      "github_url": "https://github.com/ankushjain2001/NYC-Open-Data-Profiling",
+      "image_url": "./img/projects/nycdp.png",
+      "demo_url": "",
+      "tech": [
+        "Spark",
+        "Big Data Hadoop",
+        "Python",
+        "Data Analysis",
+        "Data Visualization"
+      ]
+    }
+  ],
+  "other_projects": [
+    {
+      "name": "",
+      "description": "",
+      "github_url": "",
+      "image_url": "",
+      "demo_url": "",
+      "tech": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
   ]
 };
