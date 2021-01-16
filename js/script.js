@@ -220,7 +220,9 @@ function load_projects() {
     </div>
     
     `
+    html_data = $(html_data).hide();
     $("#projects_others").append(html_data);
+    html_data.show('normal');
 
     // Hide button if no elements are remaining
     if (oth_projects.getCount() == 0){
