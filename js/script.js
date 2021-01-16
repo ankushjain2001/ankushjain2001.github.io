@@ -9,7 +9,7 @@ $(document).ready(function(){
   
       // add/remove class to navbar when scrolling to hide/show
       var scroll = $(window).scrollTop();
-      if (scroll >= previousScroll) {
+      if (scroll >= previousScroll && scroll >=0) {
           $('.navbar').addClass("navbar-hide");
           $('.navbar').addClass("shadow");
           $('.navbar').removeClass("py-4");
