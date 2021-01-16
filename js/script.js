@@ -39,9 +39,7 @@ $(document).ready(function(){
 
   });
   
-  // 3. Project
-  var template_1 = ``
-  var template_2 = ``
+  // 3(a). Project
 
   for (let i=0; i<data.featured_projects.length; i++){
 
@@ -51,14 +49,14 @@ $(document).ready(function(){
     // Add data for youtube or github links
     let link_data = ``
     if (data.featured_projects[i].demo_url != "") {
-      link_data += `<a class="git-project-icon" href="`+data.featured_projects[i].demo_url+`"><i class="lni lni-youtube"></i></a>`
+      link_data += `<a class="git-project-icon" href="`+data.featured_projects[i].demo_url+`" target="_blank"><i class="lni lni-youtube"></i></a>`
       img_to_src_url = data.featured_projects[i].demo_url
     }
     if (data.featured_projects[i].github_url != "") {
       if (link_data != ``){
         link_data += `<span class="px-1"></span>`
       }
-      link_data += `<a class="git-project-icon" href="`+data.featured_projects[i].github_url+`"><i class="lni lni-github"></i></a>`
+      link_data += `<a class="git-project-icon" href="`+data.featured_projects[i].github_url+`" target="_blank"><i class="lni lni-github"></i></a>`
       img_to_src_url = data.featured_projects[i].github_url
     }
     
@@ -82,7 +80,7 @@ $(document).ready(function(){
 
           </div>
           <div class="col-md-5 order-md-1">
-              <a href="`+img_to_src_url+`">
+              <a href="`+img_to_src_url+`" target="_blank">
                   <img src="`+data.featured_projects[i].image_url+`" class="d-block img-round img-project-big" alt="">
               </a>
           </div>
@@ -110,7 +108,7 @@ $(document).ready(function(){
 
           </div>
           <div class="col-md-5 order-md-2">
-              <a href="`+img_to_src_url+`">
+              <a href="`+img_to_src_url+`" target="_blank">
                   <img src="`+data.featured_projects[i].image_url+`" class="d-block img-round img-project-big" alt="">
               </a>
           </div>
@@ -119,6 +117,77 @@ $(document).ready(function(){
       ` 
       $("#projects_featured").append(html_data);
     }
+  };
+
+
+  // 3(b). Other Project
+  // Queue class implemented
+  class Queue 
+  { 
+    constructor(data) { 
+      this.items = data; 
+    }
+    // Enqueue function
+    enqueue(element) {     
+      this.items.push(element); 
+    }
+    // Dequeue function
+    dequeue() {
+      if(this.items.length == 0) 
+        return "Underflow"; 
+      return this.items.shift(); 
+    }
   }
+
+  // Number of projects
+  var num_oth_projects = data.other_projects.length
+  // Queue initialization
+  var oth_projects  = new Queue(data.other_projects)
+
+  for (let i=0; i<num_oth_projects; i++){
+    let item = oth_projects.dequeue()
+
+    // Add data for youtube or github links
+    let link_data = ``
+    if (item.demo_url != "") {
+      link_data += `<a class="git-project-icon" href="`+item.demo_url+`" target="_blank"><i class="lni lni-link"></i></a>`
+      title_to_src_url = item.demo_url
+    }
+    if (item.github_url != "") {
+      if (link_data != ``){
+        link_data += `<span class="px-1"></span>`
+      }
+      link_data += `<a class="git-project-icon" href="`+item.github_url+`" target="_blank"><i class="lni lni-github"></i></a>`
+      title_to_src_url = item.github_url
+    }
+
+    // Add data for tech badges
+    let tech_data = ``
+    for (let j=0; j<item.tech.length; j++){
+      tech_data += `<span class="badge badge-primary text-light mono-font badge-tech mr-1">`+item.tech[j]+`</span>`
+    }
+    // Overall html data
+    let html_data = `
+    
+    <div class="col mb-4">
+      <div class="card project-card shadow-sm">
+        <div class="card-body pb-2"  style="min-height: 190px;">
+        <a class="git-project-text-link" href = "`+ title_to_src_url +`" target="_blank">
+            <p class="text-left mb-1"><i class="lni lni-code text-primary pr-2"></i><strong>`+ item.name +`</strong></p>
+        </a>
+            <p class="text-left dark-sub-text small mb-1">`+ item.description +`</p>
+        </div>
+        <div class="card-footer pb-2" style="min-height: 120px;">
+            <div class="text-left pb-1 mb-2">`+ tech_data +`</div>
+            <div class="text-left pb-2"style="position:absolute; bottom:0;">`+ link_data +`</div>
+        </div>
+      </div>
+    </div>
+    
+    `
+    $("#projects_others").append(html_data);
+
+
+  };
 
 });

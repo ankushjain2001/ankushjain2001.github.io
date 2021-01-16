@@ -219,6 +219,16 @@ hr{
   color: #007bff;
 }
 
+.git-project-text-link {
+  color: rgba(255, 255, 255, 0.87);
+  transition: 0.3s;
+}
+
+.git-project-text-link:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
 .badge-tech{
   border-radius: 50px;
   padding-left: 10px;
