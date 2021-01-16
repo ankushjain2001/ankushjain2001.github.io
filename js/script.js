@@ -20,7 +20,7 @@ $(document).ready(function(){
       }
       previousScroll = scroll;
       
-      if(scroll == 0) {
+      if(scroll <= 20) {
         $('.navbar').removeClass("shadow");
         $('.navbar').addClass("py-4");
       }
@@ -75,14 +75,14 @@ $(document).ready(function(){
     // Add data for youtube or github links
     let link_data = ``
     if (data.featured_projects[i].demo_url != "") {
-      link_data += `<a class="git-project-icon" href="`+data.featured_projects[i].demo_url+`" target="_blank"><i class="lni lni-youtube"></i></a>`
+      link_data += `<a class="youtube-project-icon" href="`+data.featured_projects[i].demo_url+`" target="_blank"><i class="fab fa-youtube"></i></a>`
       img_to_src_url = data.featured_projects[i].demo_url
     }
     if (data.featured_projects[i].github_url != "") {
       if (link_data != ``){
-        link_data += `<span class="px-1"></span>`
+        link_data += `<span class="px-2"></span>`
       }
-      link_data += `<a class="git-project-icon" href="`+data.featured_projects[i].github_url+`" target="_blank"><i class="lni lni-github"></i></a>`
+      link_data += `<a class="git-project-icon" href="`+data.featured_projects[i].github_url+`" target="_blank"><i class="fab fa-github"></i></a>`
       img_to_src_url = data.featured_projects[i].github_url
     }
     
@@ -98,9 +98,9 @@ $(document).ready(function(){
       
       <div class="row px-3 my-4">
           <div class="col-md-7 order-md-2 my-auto">
-              <p class="text-right small mb-1"><i class="lni lni-star-filled text-warning mr-1"></i> Featured Project</p>
+              <p class="text-right small mb-1"><i class="fas fa-star text-warning mr-1"></i></i> Featured Project</p>
               <h3 class="text-right sub-heading-size mb-1"><b>`+data.featured_projects[i].name+`</b></h3>
-              <p class="text-right dark-sub-text">`+data.featured_projects[i].description+`</p>
+              <p class="dark-sub-text text-justify">`+data.featured_projects[i].description+`</p>
               <div class="text-right small pb-1 mb-2">`+tech_data+`</div>
               <div class="text-right">`+link_data+`</div>
 
@@ -126,9 +126,9 @@ $(document).ready(function(){
       
       <div class="row px-3 my-4">
           <div class="col-md-7 order-md-1 my-auto">
-              <p class="text-left small mb-1"><i class="lni lni-star-filled text-warning mr-1"></i> Featured Project</p>
+              <p class="text-left small mb-1"><i class="fas fa-star text-warning mr-1"></i> Featured Project</p>
               <h3 class="text-left sub-heading-size mb-1"><b>`+data.featured_projects[i].name+`</b></h3>
-              <p class="text-left dark-sub-text">`+data.featured_projects[i].description+`</p>
+              <p class="dark-sub-text text-justify">`+data.featured_projects[i].description+`</p>
               <div class="text-left small pb-1 mb-2">`+tech_data+`</div>
               <div class="text-left">`+link_data+`</div>
 
@@ -185,21 +185,21 @@ function load_projects() {
     // Add data for youtube or github links
     let link_data = ``
     if (item.demo_url != "") {
-      link_data += `<a class="git-project-icon" href="`+item.demo_url+`" target="_blank"><i class="lni lni-link"></i></a>`
+      link_data += `<a class="git-project-icon" href="`+item.demo_url+`" target="_blank"><i class="fas fa-external-link-alt small"></i></a>`
       title_to_src_url = item.demo_url
     }
     if (item.github_url != "") {
       if (link_data != ``){
         link_data += `<span class="px-2"></span>`
       }
-      link_data += `<a class="git-project-icon" href="`+item.github_url+`" target="_blank"><i class="lni lni-github"></i></a>`
+      link_data += `<a class="git-project-icon" href="`+item.github_url+`" target="_blank"><i class="fab fa-github"></i></a>`
       title_to_src_url = item.github_url
     }
 
     // Add data for tech badges
     let tech_data = ``
     for (let j=0; j<item.tech.length; j++){
-      tech_data += `<span class="badge badge-primary text-light mono-font badge-tech mr-1">`+item.tech[j]+`</span>`
+      tech_data += `<span class="badge badge-primary text-light mono-font badge-tech mr-2">`+item.tech[j]+`</span>`
     }
     // Overall html data
     let html_data = `
@@ -208,9 +208,9 @@ function load_projects() {
       <div class="card project-card shadow-sm hvr-float">
         <div class="card-body pb-2"  style="min-height: 190px;">
         <a class="git-project-text-link" href = "`+ title_to_src_url +`" target="_blank">
-            <p class="text-left mb-1"><i class="lni lni-code text-primary pr-2"></i><strong>`+ item.name +`</strong></p>
+            <p class="text-left mb-1"><i class="fas fa-code text-primary pr-2 small"></i><strong>`+ item.name +`</strong></p>
         </a>
-            <p class="text-left dark-sub-text small mb-1">`+ item.description +`</p>
+            <p class=" text-justify dark-sub-text small mb-1">`+ item.description +`</p>
         </div>
         <div class="card-footer pb-4" style="min-height: 130px;">
             <div class="text-left pb-1 mb-3">`+ tech_data +`</div>
