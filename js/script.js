@@ -3,7 +3,7 @@
 $(document).ready(function(){
 
   // 0. Navbar scroll
-  var previousScroll = 20;
+  var previousScroll = 0;
   // scroll functions
   $(window).scroll(function(e) {
   
