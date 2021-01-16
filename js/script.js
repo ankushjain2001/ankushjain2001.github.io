@@ -12,18 +12,19 @@ $(document).ready(function(){
       if (scroll >= previousScroll) {
           $('.navbar').addClass("navbar-hide");
           $('.navbar').addClass("shadow");
-          // $('.navbar').removeClass("py-4");
-          // $('.navbar').removeClass("py-2");
+          $('.navbar').removeClass("py-4");
+          $('.navbar').removeClass("py-2");
       
-      }else if (scroll < previousScroll) {
+      }else if (scroll < previousScroll || scroll <= 0) {
           $('.navbar').removeClass("navbar-hide");
       }
-      previousScroll = scroll;
       
       if(scroll <= 20) {
         $('.navbar').removeClass("shadow");
-        // $('.navbar').addClass("py-4");
+        $('.navbar').addClass("py-4");
       }
+
+      previousScroll = scroll;
   
   });
 
