@@ -1,6 +1,32 @@
 // Using data variable from data.js
 
 $(document).ready(function(){
+
+  // 0. Navbar scroll
+  var previousScroll = 20;
+  // scroll functions
+  $(window).scroll(function(e) {
+  
+      // add/remove class to navbar when scrolling to hide/show
+      var scroll = $(window).scrollTop();
+      if (scroll >= previousScroll) {
+          $('.navbar').addClass("navbar-hide");
+          $('.navbar').addClass("shadow");
+          $('.navbar').removeClass("py-4");
+          $('.navbar').removeClass("py-2");
+      
+      }else if (scroll < previousScroll) {
+          $('.navbar').removeClass("navbar-hide");
+      }
+      previousScroll = scroll;
+      
+      if(scroll == 0) {
+        $('.navbar').removeClass("shadow");
+        $('.navbar').addClass("py-4");
+      }
+  
+  });
+
   // 1. About
   $("#about-p1").html(data.about.intro);
   // Default skill
@@ -81,7 +107,7 @@ $(document).ready(function(){
           </div>
           <div class="col-md-5 order-md-1">
               <a href="`+img_to_src_url+`" target="_blank">
-                  <img src="`+data.featured_projects[i].image_url+`" class="d-block img-round img-project-big" alt="">
+                  <img src="`+data.featured_projects[i].image_url+`" class="d-block img-round img-project-big hvr-float" alt="">
               </a>
           </div>
       </div>
@@ -109,7 +135,7 @@ $(document).ready(function(){
           </div>
           <div class="col-md-5 order-md-2">
               <a href="`+img_to_src_url+`" target="_blank">
-                  <img src="`+data.featured_projects[i].image_url+`" class="d-block img-round img-project-big" alt="">
+                  <img src="`+data.featured_projects[i].image_url+`" class="d-block img-round img-project-big hvr-float" alt="">
               </a>
           </div>
       </div>
@@ -119,32 +145,41 @@ $(document).ready(function(){
     }
   };
 
+  load_projects();
 
-  // 3(b). Other Project
-  // Queue class implemented
-  class Queue 
-  { 
-    constructor(data) { 
-      this.items = data; 
-    }
-    // Enqueue function
-    enqueue(element) {     
-      this.items.push(element); 
-    }
-    // Dequeue function
-    dequeue() {
-      if(this.items.length == 0) 
-        return "Underflow"; 
-      return this.items.shift(); 
-    }
+});
+
+// 3(b). Other Project
+// Queue class implemented
+class Queue 
+{ 
+  constructor(data) { 
+    this.items = data; 
   }
+  // Enqueue function
+  enqueue(element) {     
+    this.items.push(element); 
+  }
+  // Dequeue function
+  dequeue() {
+    if(this.items.length == 0) 
+      return "Underflow"; 
+    return this.items.shift(); 
+  }
+
+  getCount(){
+    return this.items.length;
+  }
+};
+
+function load_projects() {
 
   // Number of projects
   var num_oth_projects = data.other_projects.length
   // Queue initialization
   var oth_projects  = new Queue(data.other_projects)
 
-  for (let i=0; i<num_oth_projects; i++){
+  for (let i=0; i<6; i++){
     let item = oth_projects.dequeue()
 
     // Add data for youtube or github links
@@ -155,7 +190,7 @@ $(document).ready(function(){
     }
     if (item.github_url != "") {
       if (link_data != ``){
-        link_data += `<span class="px-1"></span>`
+        link_data += `<span class="px-2"></span>`
       }
       link_data += `<a class="git-project-icon" href="`+item.github_url+`" target="_blank"><i class="lni lni-github"></i></a>`
       title_to_src_url = item.github_url
@@ -169,16 +204,16 @@ $(document).ready(function(){
     // Overall html data
     let html_data = `
     
-    <div class="col mb-4">
-      <div class="card project-card shadow-sm">
+    <div class="col mb-5">
+      <div class="card project-card shadow-sm hvr-float">
         <div class="card-body pb-2"  style="min-height: 190px;">
         <a class="git-project-text-link" href = "`+ title_to_src_url +`" target="_blank">
             <p class="text-left mb-1"><i class="lni lni-code text-primary pr-2"></i><strong>`+ item.name +`</strong></p>
         </a>
             <p class="text-left dark-sub-text small mb-1">`+ item.description +`</p>
         </div>
-        <div class="card-footer pb-2" style="min-height: 120px;">
-            <div class="text-left pb-1 mb-2">`+ tech_data +`</div>
+        <div class="card-footer pb-4" style="min-height: 130px;">
+            <div class="text-left pb-1 mb-3">`+ tech_data +`</div>
             <div class="text-left pb-2"style="position:absolute; bottom:0;">`+ link_data +`</div>
         </div>
       </div>
@@ -187,7 +222,11 @@ $(document).ready(function(){
     `
     $("#projects_others").append(html_data);
 
+    // Hide button if no elements are remaining
+    if (oth_projects.getCount() == 0){
+      $("#show-button-row").css({"display":"none"})
+    }
 
   };
+};
 
-});
