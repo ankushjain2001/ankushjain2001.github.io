@@ -99,7 +99,7 @@ var data = {
     },
     {
       "name": "Ascend",
-      "description": "Developed an end-to-end natural text search engine for business teams (primarily the new recruits) to mine business information from mailbox data such as documents, meetings etc. of all the project team members and improve their productivity. A BERT model for Question and Answering was also trained and deployed. This project was built in solo capacity within a month.",
+      "description": "Developed an end-to-end natural text search engine for business teams to mine information from mailbox data of all the project team members and improve their productivity. A BERT model for Question and Answering was also trained and deployed. This project was built in solo capacity within a month.",
       "github_url": "",
       "image_url": "./img/projects/ascend.png",
       "demo_url": "https://www.youtube.com/watch?v=NocONFKs7Y0",
