@@ -135,7 +135,7 @@ var data = {
       "description": "Developed the Vyorius Command Center, a platform for operating and managing unmanned robots. Deploying the various Vyorius products on Amazon Web Services by utilizing the various AWS microservices. Vyorius is an early-stage startup.",
       "github_url": "",
       "image_url": "",
-      "demo_url": "http://vyorius-frontend-logindashboard.s3-website.eu-central-1.amazonaws.com/sign-in",
+      "demo_url": "http://vyorius-home.s3-website.eu-central-1.amazonaws.com/sign-in",
       "tech": [
         "Node.js",
         "React",
