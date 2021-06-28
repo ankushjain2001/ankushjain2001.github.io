@@ -14,15 +14,17 @@
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" href="./img/logo.png" sizes="180x180">
+        <link rel="icon" href="./img/logo.png" sizes="128x128" type="image/png">
+        <link rel="icon" href="./img/logo.png" sizes="64x64" type="image/png">
         <link rel="icon" href="./img/logo.png" sizes="32x32" type="image/png">
         <link rel="icon" href="./img/logo.png" sizes="16x16" type="image/png">
     </head>
 
     <body>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-main py-4 px-md-5">
-            <a href="#" class="navbar-brand hvr-float d-flex align-items-center my-0 me-md-auto fw-normal">
-                <img src="./img/logo.png" alt="Ankush Jain" width="45" height="45">
+        <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-navbar-default py-4 px-md-5">
+            <a href="#" class="navbar-brand logo hvr-float d-flex align-items-center my-0 me-md-auto fw-normal">
+                <img src="./img/logo.png" alt="Ankush Jain" width="46" height="46">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -31,6 +33,9 @@
                 <ul class="navbar-nav mono-font ml-auto">
                     <li class="nav-item ">
                         <a class="nav-link p-2" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link p-2" href="#experience">Experience</a>
@@ -47,19 +52,19 @@
         </nav>
 
         <!-- Jumbotron -->
-        <div class="jumbotron vertical-center pt-4 mt-4 px-2">
-            <div class="container">
-                <h1 class="head-font name-heading-size mb-0"><b>Ankush Jain.</b></h1>
-                <h1 class="head-font text-primary heading-size mb-2"><b>Passionate about building AI products.</b></h1>
-                <p class="mb-sm-0 dark-sub-text">I am a Software Engineer from New York City, with specialization in Full-Stack Development and Machine Learning.</p>
-                <p class="dark-sub-text">I build machine learning models, deploy them on backend platforms, and build the UI/UX for the end product.</p>
+        <div class="jumbotron vertical-center pt-5 px-2">
+            <div class="container mt-5">
+                <h1 id="head-name" class="hero-head-font head-text name-heading-size mt-5 mb-0"></h1>
+                <h1 id="head-tagline" class="hero-head-font text-primary heading-size mb-2"></h1>
+                <p id="head-intro1" class="mb-sm-0 dark-sub-text"></p>
+                <p id="head-intro2" class="dark-sub-text"></p>
                 
                 <hr class="my-5">
                 
                 <div class="row">
                     <div class="col">
-                        <h1 class="head-font heading-size mb-0"><b>Get in touch</b></h1>
-                        <p class="mono-font mb-4 dark-sub-text email-text"><i class="fas fa-at mr-2"></i>ankushjain2001@yahoo.co.in</p>
+                        <h1 class="hero-head-font head-text heading-size mb-0"><b>Get in touch</b></h1>
+                        <p id="head-email" class="mono-font mb-4 dark-sub-text email-text"><i class="fas fa-at mr-2"></i></p>
                     </div>
                 </div>
 
@@ -86,55 +91,70 @@
                 </div>
             </div>
         </div>
+
         <!-- 1. About -->
-        <div id="about" class="container my-md-5 px-4">
+        <div id="about" class="container my-md-5 px-4 pt-4">
             <div class="row">
-                <div class="col-md-3">
-                    <h1 class="heading-size head-font my-4"><b>About Me</b></h1>
+                <div class="col-md-2">
+                    <h1 class="heading-size head-text hero-head-font my-4"><b>About Me</b></h1>
                 </div>
-                <div class="col pt-4 mt-2 d-none d-sm-inline-block">
+                <div class="col pt-3 mt-2 d-none d-sm-inline-block">
                     <hr>
                 </div>
             </div>
 
             <div class="row">
 
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <p id="about-p1" class="mb-sm-0 dark-sub-text text-justify"></p>
                 </div>
-                <div class="col-md-4">
-                    <img src="./img/me.png" class="mx-auto d-block img-round hvr-float my-2" alt="Ankush Jain" width="250px">
+                <div class="col-md-3">
+                    <img src="./img/me.png" class="mx-auto d-block img-round hvr-float my-2" alt="Ankush Jain" width="210px">
                 </div>
             </div>
 
-            <div class="row justify-content-center mt-4">
+        </div>
+
+        <!-- 2. Skills -->
+        <div id="skills" class="container my-md-5 px-4 pt-4">
+            <div class="row">
+                <div class="col-md-2">
+                    <h1 class="heading-size head-text hero-head-font my-4"><b>Skills</b></h1>
+                </div>
+                <div class="col pt-3 mt-2 d-none d-sm-inline-block">
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-1">
                 <div class="d-flex px-4">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-outline-primary py-1">
-                            <input type="radio" name="skills" id="option1" value="0" checked> <span class="px-2 small-custom">Machine Learning</span>
+                        <label class="btn btn-outline-primary py-1 pb-1">
+                            <input type="radio" name="skills" id="option1" value="0" checked> <span class="px-2 small-custom">Programming</span>
                         </label>
-                        <label class="btn btn-outline-primary py-1">
-                            <input type="radio" name="skills" id="option2" value="1"> <span class="px-2 small-custom">Full-Stack</span>
+                        <label class="btn btn-outline-primary py-1 pb-1">
+                            <input type="radio" name="skills" id="option2" value="1"> <span class="px-2 small-custom">ML/NLP</span>
                         </label>
                     </div>
                 </div>
             </div>
 
-            <div class="row mt-4 pt-2 justify-content-left">
-                <div class="col px-0 mono-font dark-sub-text exp-width">
+            <div class="row mt-4 pt-2 justify-content-center">
+                <div class="d-flex px-0 mono-font dark-sub-text">
                     <ul id="about-skill" class="mb-0">
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- 2. Experience -->
+
+        <!-- 3. Experience -->
         <div id="experience" class="container my-md-5 px-4 pt-4">
             <div class="row">
-                <div class="col-md-3">
-                    <h1 class="heading-size head-font my-4"><b>Experience</b></h1>
+                <div class="col-md-2">
+                    <h1 class="heading-size head-text hero-head-font my-4"><b>Experience</b></h1>
                 </div>
-                <div class="col pt-4 mt-2 d-none d-sm-inline-block">
+                <div class="col pt-3 mt-2 d-none d-sm-inline-block">
                     <hr>
                 </div>
             </div>  
@@ -142,39 +162,48 @@
             <div class="row justify-content-center">
                 <div class="d-flex px-3">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-outline-primary py-1">
-                            <input type="radio" name="experience" id="option1" value="0" checked> <span class="px-1 small-custom">NYU TSOE</span>
+                        <label class="btn btn-outline-primary py-1 pb-1">
+                            <input type="radio" name="experience" id="option1" value="0" checked> <span class="px-1 small-custom">Amazon</span>
                         </label>
-                        <label class="btn btn-outline-primary py-1">
-                            <input type="radio" name="experience" id="option2" value="1"> <span class="px-1 small-custom">Vyorius</span>
+                        <label class="btn btn-outline-primary py-1 pb-1">
+                            <input type="radio" name="experience" id="option1" value="1"> <span class="px-1 small-custom">NYU</span>
                         </label>
-                        <label class="btn btn-outline-primary py-1">
-                            <input type="radio" name="experience" id="option3" value="2"> <span class="px-1 small-custom">NYU CDS</span>
+                        <label class="btn btn-outline-primary py-1 pb-1">
+                            <input type="radio" name="experience" id="option2" value="2"> <span class="px-1 small-custom">Vyorius</span>
                         </label>
-                        <label class="btn btn-outline-primary py-1">
-                            <input type="radio" name="experience" id="option4" value="3"> <span class="px-1 small-custom">Infosys</span>
+                        <label class="btn btn-outline-primary py-1 pb-1">
+                            <input type="radio" name="experience" id="option3" value="3"> <span class="px-1 small-custom">Infosys</span>
                         </label>
                     </div>
                 </div>
             </div>
 
-            <div class="row justify-content-center">
+            <div id='exp-1' class="row justify-content-center">
                 <div class="dflex mt-4 pt-2 px-3 exp-width">
-                    <p class="mb-1 "><b><span id="exp-role"> </span> <span class="text-primary">@</span> <span id="exp-name" class="text-primary"> </span></b></p>
-                    <p class="mb-1 mono-font dark-sub-text"><span id="exp-duration"> </span> | <span id="exp-type"> </span></p>
-                    <ul id="exp-description" class="mono-font dark-sub-text mb-0">
+                    <p class="mb-1 head-text"><b><span id="exp-role"></span> <span id="exp-name" class="text-primary"> </span></b></p>
+                    <p class="mb-1 mono-font dark-sub-text"><span id="exp-duration"></span><span id="exp-type"> </span></p>
+                    <ul id="exp-description" class="exp-description mono-font dark-sub-text mb-0">
                     </ul>
-                </div>   
+                </div>
             </div>
+            <div id='exp-2' class="row justify-content-center">
+                <div class="dflex mt-4 pt-2 px-3 exp-width">
+                    <p class="mb-1 head-text"><b><span id="exp-role-2"></span> <span id="exp-name-2" class="text-primary"></span></b></p>
+                    <p class="mb-1 mono-font dark-sub-text"><span id="exp-duration-2"></span><span id="exp-type-2"> </span></p>
+                    <ul id="exp-description-2" class="exp-description mono-font dark-sub-text mb-0">
+                    </ul>
+                </div>
+            </div>
+
         </div>
 
-        <!-- 3. Projects -->
+        <!-- 4. Projects -->
         <div id="projects" class="container my-md-5 px-4 pt-4">
             <div class="row">
-                <div class="col-md-3">
-                    <h1 class="heading-size head-font my-4"><b>Projects</b></h1>
+                <div class="col-md-2">
+                    <h1 class="heading-size head-text hero-head-font my-4"><b>Projects</b></h1>
                 </div>
-                <div class="col pt-4 mt-2 d-none d-sm-inline-block">
+                <div class="col pt-3 mt-2 d-none d-sm-inline-block">
                     <hr>
                 </div>
             </div>
@@ -184,7 +213,7 @@
             <div class="row justify-content-center mb-4">
                 <div class="col mt-5 pt-5 d-none d-sm-inline-block"><hr></div>
                 <div class="col-md-3 px-auto mt-5 py-4 text-center">
-                    <h1 class="sub-heading-size head-font my-4"><b>Other Key Projects</b></h1>
+                    <h1 class="sub-heading-size head-text hero-head-font my-4"><b>Other Key Projects</b></h1>
                 </div>
                 <div class="col mt-5 pt-5 d-none d-sm-inline-block"><hr></div>
             </div>
@@ -206,21 +235,21 @@
             </div>
         </div>
 
-        <!-- 4. Contact Me -->
+        <!-- 5. Contact Me -->
         <div id="contact" class="container my-md-5 px-4 pt-4">
             <div class="row">
-                <div class="col-md-3">
-                    <h1 class="heading-size head-font mb-4"><b>Contact Me</b></h1>
+                <div class="col-md-2 pr-0">
+                    <h1 class="heading-size head-text hero-head-font my-4"><b>Contact Me</b></h1>
                 </div>
-                <div class="col mt-2 d-none d-sm-inline-block">
+                <div class="col pt-3 mt-2 d-none d-sm-inline-block">
                     <hr>
                 </div>
             </div>
 
             <div class="row justify-content-center">
                 <div class="dflex dark-sub-text text-justify px-3">
-                    <p>At the moment, I am looking for a full-time position as a Software Engineer or Machine Learning Engineer. Ideally, I would love to work in a role that is focused on AI-based product development.</p>
-                    <p>Please feel free to drop me an email at <span class="text-primary ">ankushjain2001@yahoo.co.in</span> or connect with me through one of the platforms below.</p>
+                    <p id="contact-brief" ></p>
+                    <p>I'm always open to discuss ideas or collaborate. Please feel free to drop me an email at <span id="tail-email" class=" text-primary mono-font"></span> or connect with me at one of the platforms below. I will try my best to get back to you!</p>
                 </div>
                 <div class="col-md-4 my-3">
                     <div class="row justify-content-center">
@@ -247,11 +276,11 @@
         <!-- Footer -->
         <div id="footer" class="container mt-2 mb-0 px-4">
             <div class="row justify-content-center mono-font dark-sub-text mt-2">
-                <p class="footer-text mb-1"><i class="fas fa-tools"></i> Built by <a href="https://github.com/ankushjain2001" style="color: #007bff;">Ankush Jain</a>.</p>
+                <p class="footer-text mb-4"><i class="fas fa-tools text-danger"></i> Built & <i class="fas fa-palette  text-warning"></i> Designed by <a href="https://github.com/ankushjain2001" style="color: #007bff;"><b>Ankush Jain</b></a>.</p>
             </div>
             <div id="footer" class="container mb-2 mt-0 px-4">
                 <div class="row justify-content-center mono-font dark-sub-text">
-                    <p class="footer-text small"><i class="fas fa-lightbulb"></i></i> Design cues adapted from <a href="https://brittanychiang.com/" style="color: #64ffda;">Brittany Chiang</a>.</p>
+                    <p class="footer-text small"></p>
                 </div>
             </div>
         </div>

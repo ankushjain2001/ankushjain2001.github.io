@@ -1,78 +1,92 @@
 var data = {
+  "head": {
+    "name": "Ankush Jain",
+    "tagline": "Passionate about building AI-driven Products",
+    "introbrief1": "I am an all-round <span class='text-white'><b>Software Engineer</b></span> based in Cupertino CA, specializing  in <span class='text-white'><b>Full-Stack development, Machine Learning & NLP</b></span>.",
+    "introbrief2": "I build NLP language models, deploy them on backend platforms, and occasionally design the UI/UX for the end product.",
+    "email": "ankushjain2001@yahoo.co.in"
+  },
   "about": {
-    "intro": "Hello! I am Ankush Jain, a machine learning engineer and a full-stack developer. My experience has prepared me to apply my skills for solving real-world problems. And my on-going study in the master's program at <a href=\"https://engineering.nyu.edu/academics/programs/computer-science-ms\" class=\"text-primary\">New York University</a> has further equipped me with all the essential tools for my niche.<br><br>Previously, I have worked as a Software Engineer at <a href=\"https://www.infosys.com/services/validation-solutions/service-offerings/machine-learning-qa.html\" class=\"text-primary\">Infosys</a>. I worked on a variety of machine learning solutions for Software Quality Assurance & Testing. Presently, I am working part-time with <a href=\" https://vyorius.com/\" class=\"text-primary\">Vyorius</a> to deploy their product-line on AWS.<br><br>Here are my key skills in Machine Learning and Full-Stack development.",
-    "ml": "\
-        <li>Python (NumPy, Pandas, Scikit-Learn etc.) / R</li>\
-        <li>PyTorch / Keras</li>\
-        <li>Spark / Hadoop</li>\
-        <li>Natural Language Processing</li>\
-        <li>Predictive Modelling</li>\
-        <li>Unsupervised Learning </li>\
-        <li>Deep Learning</li>\
+    "intro": "With my curiosity and DIY work style, I have a knack for gathering many skills from my experiences. I like to work in teams and build new skills by transfer learning from my colleagues. I also appreciate structure and order, albeit by distilling a few messy ideas or walking some extra miles.<br><br>I have engineering experience with companies such as <a href=\"https://aws.amazon.com/about-aws/\">Amazon</a> and <a href=\"https://www.infosys.com/services/validation-solutions/service-offerings/machine-learning-qa.html\" class=\"text-primary\">Infosys</a>. I graduated with a master's degree in computer science from <a href=\"https://engineering.nyu.edu/academics/programs/computer-science-ms\" class=\"text-primary\">New York University</a>. I have also had occasional trysts with start-ups, and I am influenced by the go-getter mindset of the start-up culture. At the moment, I am keeping a keen sight on the ability of my technological work in building value for businesses.",
+    "pg": "\
+        <li><span class=\"text-primary\">Languages&nbsp: </span>Python / Java / JavaScript / C / C++ / R</li>\
+        <li><span class=\"text-primary\">Databases&nbsp: </span>SQL / MongoDB / DynamoDB / Elasticsearch (ELK)</li>\
+        <li><span class=\"text-primary\">Back-end&nbsp&nbsp: </span>Node.js / Flask / FastAPI</li>\
+        <li><span class=\"text-primary\">Front-end&nbsp: </span>React / JQuery / AngularJS</li>\
+        <li><span class=\"text-primary\">Cloud&nbsp&nbsp&nbsp&nbsp&nbsp: </span>Amazon Web Services (EC2, Lambda, Cognito, Kinesis etc.)</li>\
+        <li><span class=\"text-primary\">Utilities&nbsp: </span>Git / Docker / Travis CI / Jupyter / NPM </li>\
     ",
-    "fs": "\
-        <li>Python / C / C++ / Java</li>\
-        <li>HTML / CSS / JS</li>\
-        <li>SQL / MongoDB / DynamoDB</li>\
-        <li>Node.js / Flask / FastAPI</li>\
-        <li>React / JQuery / AngularJS</li>\
-        <li>Amazon Web Services (EC2, Lambda, Cognito, Kinesis etc.)</li>\
-        <li>Elasticsearch</li>\
+    "ml": "\
+        <li><span class=\"text-primary\">Skills&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: </span>Machine Learning / Deep Learning / Natural Language Processing</li>\
+        <li><span class=\"text-primary\">Deep Learning&nbsp: </span>Transformers / RNN / LSTM / CNN / GAN / Auto-Encoders</li>\
+        <li><span class=\"text-primary\">Libraries&nbsp&nbsp&nbsp&nbsp&nbsp: </span>PyTorch / Keras / Tensorflow / NumPy / Pandas / SciKit-Learn / NLTK</li>\
+        <li><span class=\"text-primary\">Data Science&nbsp&nbsp:  </span>Statistical Analysis / Predictive Modelling / Visualization</li>\
+        <li><span class=\"text-primary\">Big Data&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: </span>Spark / Hadoop</li>\
+        <li><span class=\"text-primary\">Utilities&nbsp&nbsp&nbsp&nbsp&nbsp: </span>Jupyter / Anaconda </li>\
     "
   },
   "experience": [
-    {
+    [{
+      "name": "Amazon Inc.",
+      "role": "Software Development Engineer",
+      "type": "Full Time",
+      "duration": "July 2021 - Present",
+      "description": "\
+        <li>Developing solutions for a network product at Amazon Web Services (AWS) in Java and Python</li>\
+      "
+    }],
+    [{
       "name": "New York University - Tandon School of Engineering",
       "role": "Graduate Research Assistant",
       "type": "Part Time",
-      "duration": "Dec 2020 - Present",
+      "duration": "Dec 2020 - May 2021",
       "description": "\
-        <li>Building data pipelines to process, visualize, and model the vast amounts of data produced by the various study programs taught at NYU Tandon Bridge</li>\
-        <li>Modelling knowledge graphs to map the various topics taught in the program and identify connectivity amongst them</li>\
+        <li>Conducted experiments to understand the root cause of student attrition in the NYU Tandon Bridge Program</li>\
+        <li>Built data pipelines to process, visualize, and model the vast amounts of data produced by the program</li>\
+        <li>Performed sentiment analysis of student forum discussions over the duration of the course and discovered that the student dissatisfaction increases with each exam</li>\
+        <li>Experimented topic modeling with LDA and BERT, and performed network analysis of the course modules</li>\
       "
-    },
-    {
-      "name": "Vyorius LLP",
-      "role": "Product Lead",
-      "type": "Part-time",
-      "duration": "Mar 2020 - Present",
-      "description": "\
-      <li>Deployed the Vyorius Control Center (minimum viable product) for the drone operators (end users) on AWS</li>\
-      <li>Converting the monolithic architecture of the product to microservices oriented architecture on AWS (utilizing EC2, S3, DynamoDB, Lambda, SNS, SQS, Code Pipeline etc.)</li>\
-      <li>Building a minimal CICD pipeline with Travis CI for continuous integration on GitHub and Code Deploy for continuous deployment on AWS</li>\
-      <li>Leading the software development and AI development teams for building various features and integrating them into dashboards for the Vyorius MVP</li>\
-    "
-    },
+    }, 
     {
       "name": "New York University - Center for Data Science",
       "role": "Graduate Research Assistant",
       "type": "Part-time",
-      "duration": "Jan 2020 - Jun 2020",
+      "duration": "Jan 2020 - May 2020",
       "description": "\
       <li>Developed an open-source Python library called FairPrep to design and evaluate machine learning models for social fairness and enable the users to model human demographics data without any bias (based on race, gender, orientation etc.)</li>\
-      <li>Contributed towards the development of the FairPrep open-source package for Python.</li>\
     "
-    },
-    {
+    }],
+    [{
+      "name": "Vyorius LLP",
+      "role": "Product Lead",
+      "type": "Part-time",
+      "duration": "Mar 2020 - Feb 2021",
+      "description": "\
+      <li>Deployed the Vyorius Control Center (minimum viable product for the robot operators) on AWS</li>\
+      <li>Converted the monolithic product to a microservices oriented architecture on AWS (using EC2, S3, DynamoDB, Lambda, Code Pipeline, SNS, SQS, etc.)</li>\
+      <li>Built a minimal CI/CD pipeline using Travis CI (on GitHub) and Code Pipeline/Deploy (on AWS)</li>\
+    "
+    }],
+    [{
       "name": "Infosys Limited",
       "role": "System Engineer",
       "type": "Full-time",
       "duration": "Oct 2017 - May 2019",
       "description": "\
-      <li>Deployed ML solutions to full-stack application (MEAN) and designed D3.JS visualizations for SQA processes such as test-suite optimization, defect analysis, and requirement-testcase traceability</li>\
-      <li>Achieved up to 30% test suite optimization (reduction) by identifying the redundant or similar test cases and it resulted in an average of 10-15% effort savings per build cycle/sprint in regression testing for the clients</li>\
-      <li>Analyzed the test suite optimization model (uses hierarchical clustering) for presenting it as an explainable AI solution to the clients</li>\
-      <li>Augmented the traceability functionality by improving the simple bag-of-words based lexical similarity model to a semantic similarity model and improved the minimum mapping accuracy from 10% to 35% in an unsupervised learning model</li>\
-      <li>Platform being used by leading Infosys projects in Financial Services and Energy domain</li>\
+      <li>Deployed ML solutions to full-stack application (MEAN) and designed visualizations for SQA processes such as test-suite optimization, model evaluation tool, requirement-testcase traceability, and defect analysis</li>\
+      <li>Built the NLP & ML model for the test-suite optimizer to identify up to 30% redundancies and similarities in regression tests and an average of 10-15% effort savings per build cycle for the clients</li>\
+      <li>Built a DevOps software quality dashboard to analyze the DevOps test cycles/builds and enable project managers to make data driven decisions for tracking project progress</li>\
+      <li>Predicted test cycle quality with ML regression model and generated real-time visual analytics with Kibana</li>\
+      <li>Engineered data pipelines and RESTful APIs to redirect the test logs from data source to Elasticsearch</li>\
     "
-    },
+    }],
   ],
   "featured_projects": [
     {
       "name": "Securodrive",
-      "description": "Securodrive is a driving assistant platform built on Amazon Web Services (AWS). It is built to avoid road accidents due to sleepy drivers. This app assists the drivers by applying AI to the live video stream of the driver and generates alerts when the driver appears to be yawning excessively or is in a drowsy state.<br><br>AWS Lambda, API Gateway and Kinesis were used to implement the web app and video streaming, Cognito and Rekognition for user auth, Sagemaker to train and deploy the model, and Elasticsearch & Kibana for real-time data analytics.",
+      "description": "Securodrive is a driving assistant platform built on Amazon Web Services (AWS). It is created to avoid road accidents due to sleepy drivers. This app assists the drivers by applying AI to the live video stream of the driver and generates alerts when the driver appears to be yawning excessively or is in a drowsing state.<br><br>AWS Lambda, API Gateway and Kinesis were used to implement the web app and video streaming, Cognito and Rekognition for user auth, Sagemaker to train and deploy the model, and Elasticsearch & Kibana for real-time data analytics.",
       "github_url": "https://github.com/ankushjain2001/SecuroDrive",
-      "image_url": "./img/projects/securodrive.jpg",
+      "image_url": "./img/projects/securodrive.png",
       "demo_url": "https://youtu.be/vUbxQOmeNQc",
       "tech": [
         "AWS",
@@ -84,7 +98,7 @@ var data = {
     },
     {
       "name": "Multi-hop Question & Answering",
-      "description": "Research based project to train a question and answering model for multi-hop questions. Multi-hop QA requires logical inference or aggregation of information from various parts of the long information text (like referring multiple wikis to answer a question) in order to perform QA. A transformer based longformer model was trained on the HotpotQA dataset.",
+      "description": "Research-based project to train a question and answering model for multi-hop questions. Multi-hop QA requires logical inference or aggregation of information from various parts of the long information text (like referring to multiple wikis to answer a question) to perform QA. A transformer-based Longformer model was trained on the HotpotQA dataset.",
       "github_url": "https://github.com/ankushjain2001/Multi-Hop-Question-Answering",
       "image_url": "./img/projects/mhqa.png",
       "demo_url": "",
@@ -116,7 +130,7 @@ var data = {
     },
     {
       "name": "NYC Open Data Profiling",
-      "description": "Built a high-performance Spark pipeline to ingest 1159 New York City open big data sets in order to emulate real-world data volumes, handle data noise, and perform semantic profiling of the data columns.<br><br>The generic profiling was performed with Spark RDDs and Dataframes. Semantic profiling was performed with Named Entity Recognition, Soundex, Regex, Ontologies, and Clustering.",
+      "description": "Built a high-performance Spark pipeline to ingest 1159 New York City open big data sets to emulate real-world data volumes, handle data noise, and perform semantic profiling of the data columns.<br><br>The generic profiling was performed with Spark RDDs and Dataframes. Semantic profiling was performed with Named Entity Recognition, Soundex, Regex, Ontologies, and Clustering.",
       "github_url": "https://github.com/ankushjain2001/NYC-Open-Data-Profiling",
       "image_url": "./img/projects/nycdp.png",
       "demo_url": "",
@@ -144,7 +158,7 @@ var data = {
     },
     {
       "name": "Infosys AI-Led Quality Assurance Platform",
-      "description": "Developed an AI-enabled SQA and testing product. Deployed ML solutions to full-stack application (MEAN) and designed D3.JS visualizations for SQA processes such as testsuite optimization, defect analysis, and requirement-testcase traceability.",
+      "description": "Developed an AI-enabled product for Software Quality Assurance and testing. Deployed ML solutions for test suite optimization, defect analysis, and requirement-test case traceability to a full-stack application (MEAN).",
       "github_url": "",
       "image_url": "",
       "demo_url": "https://www.infosys.com/services/validation-solutions/service-offerings/machine-learning-qa.html",
@@ -169,6 +183,7 @@ var data = {
         "SQL",
         "Elasticsearch",
         "Kibana",
+        "Machine Learning",
         "Python"
       ]
     },
@@ -362,5 +377,9 @@ var data = {
         "PHP"
       ]
     },
-  ]
+  ],
+  "contact": {
+    "brief": "",
+    "introbrief2": "I build machine learning models, deploy them on backend platforms, and build the UI/UX for the end product."
+  },
 };
